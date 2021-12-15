@@ -14,7 +14,7 @@ def list_create():
             break
     file_exists = os.path.exists(f"{name}.txt")
     if file_exists:
-        print("File already exists")
+        print("File already exists. Choose another name.")
     else:
         with open(f"{name}.txt", "a", encoding="utf=8") as file_content:
             file_content.write(child_name+"\n")
