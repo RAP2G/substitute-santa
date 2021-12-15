@@ -25,6 +25,9 @@ def list_read():
     name = input("What is the name of your whishlist? ")
     with open(f"{name}.txt", "r") as file:
         print(file.readline())
+        print("WHISHLIST")
+        for i in file:
+            print(i.strip())
 
 
 def main():
