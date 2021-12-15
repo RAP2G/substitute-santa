@@ -23,14 +23,48 @@ def list_create():
 
 def list_read():
     name = input("What is the name of your whishlist? ")
-    with open(f"{name}.txt", "r") as file:
-        print(file.readline())
-        print("WHISHLIST")
-        for i in file:
-            print(i.strip())
+    file_exists = os.path.exists(f"{name}.txt")
+    if file_exists:
+        print("File already exists. Choose another name.")
+    else:
+        with open(f"{name}.txt", "r") as file:
+            print(file.readline())
+            print("WHISH LIST")
+            for i in file:
+                print(i.strip())
 
 
-def main():
+def naughty_list():
+    print("Would you like to read the naughty list or add to it? r/a")
+    while True:
+        answer = input("Answer: ").lower()
+        if answer == "r":
+            with open("kolbarn.txt", "r") as file:
+                print("NAUGHTY LIST\n")
+                for i in file:
+                    print(i.strip())
+        elif answer == "a":
+            with open("kolbarn.txt", "r") as file:
+                print("NAUGHTY LIST")
+                for i in file:
+                    print(i.strip())
+                while True:
+                    answer = input(
+                        "Add children to the naughty list. Type 'done' if you are done.  ")
+                    if answer == "done":
+                        answer = "q"
+                        break
+                    else:
+                        with open("kolbarn.txt", "a", encoding="utf=8") as file_content:
+                            file_content.write(answer+"\n")
+
+        elif answer == "q":
+            break
+        else:
+            print("Wrong Input\n")
+
+
+def wish_list():
     print("Would you like to create a whish list? Or would you like to read one?")
     while True:
         print("Type: 'c' for create, 'r' for read or 'q' for quit")
@@ -41,6 +75,20 @@ def main():
         elif answer == "r":
             list_read()
         elif answer == "q":
+            break
+        else:
+            print("Wrong Input\n")
+
+
+def main():
+    print("Typing q will take you back to the main screen. And on the main screen it will end the program.")
+    while True:
+        answer = input("Naughty list or Whish list?N/W \n").upper()
+        if answer == "N":
+            naughty_list()
+        elif answer == "W":
+            wish_list()
+        elif answer == "Q":
             break
         else:
             print("Wrong Input\n")

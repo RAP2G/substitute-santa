@@ -1,37 +1,16 @@
-# substitute-santa
+# Substitute Santa
 
-## Tomtevikariat
+## Detta projekt handlar om följande:
 
-Ni ska skapa ert första github-projekt!
+Tomten är sjuk occh vi ska avlasta honom.
+Vi har skapat en program där tomtenissarna kan skapa önskelistor för barn och kan läsa in lsitorna. De kan även läsa in styggbarnslistan och lägga till flera stygga barn.
 
-Gå in på github och skapa ett nytt repository ni kallar för "Substitute Santa".
-Lägg till en README och en gitignore. gitignoren ska innehålla .txt (dvs ni kommer inte att ladda upp eller ner .txt-filer)
+Programmet börjar med en meny där tomtenissarna kan välja om de vill hålla på med styggbarnslistan eller önskelistorna.
 
-Projektet ni ska jobba med denna vecka är följande.
-Tomten är sjuk och ni ska avlasta honom.
+I önskelistavyn kan de skapa nya önskelistor eller läsa in redan existerande listor.
 
-Ditt program handlar om önskelistor.
-Skapa ett program som har en meny.
-Menyn ska ha två lägen.
+I styggbarnsvyn kan tomtenissarna läsa in styggbarnslistan eller lägga till den.
 
-1. Skapa önskelista.
-2. Läs upp önskelista.
+## Lärdomar
 
-Skapa Önskelista
-När du skapar en önskelista så behöver du be användaren om några saker.
-
-1. Vad ska filen heta?
-2. Vad heter barnet?
-3. Vilka saker ska skrivas till på önskelistan? (for-loop)
-
-Gör sedan så att du skriver ner i filen på följande sätt.
-Rad 1: Namn på barnet
-Rad 2 till n: Sak
-
-Läs upp önskelista
-Fråga användaren om vad filen heter.
-Skriv sedan ut namnet på barnet (första raden).
-Skriv sedan "ÖNSKELISTA"
-Skriv sedan ut rad för rad vad önskelistan innehåller.
-
-Mycket nöje! Vi jobbar med detta under tisdagen och onsdagen.
+Jag har lärt mig hur man skapar filer i Python och hur man redigerar dem. Jag har också lärt mig hur man använder os.path.exists().
